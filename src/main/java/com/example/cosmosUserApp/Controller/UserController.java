@@ -12,6 +12,12 @@ public class UserController {
     @Autowired
     private UserRepository repository;
 
+    @RequestMapping(value="hello", method = RequestMethod.GET)
+    public final String HelloWorld()
+    {
+        return "Hello world!! My app works!";
+    }
+
     @RequestMapping(value="user",method = RequestMethod.POST)
     /*
     @RequestParam("fn") String firstName,
